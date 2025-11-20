@@ -1,5 +1,5 @@
 {
-  "name": "My Awesome Integration",
+  "name": "My First HA Card",
   "render_readme": true,
   "content_in_root": false,
   "country": ["US", "CA"],
