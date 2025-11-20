@@ -1,0 +1,8 @@
+{
+    domain: "my-first-ha-card",
+    documentation: "https://github.com/NullArgument/my-first-ha-card",
+    issue_tracker: "https://github.com/NullArgument/my-first-ha-card/issues",
+    codeowners: [ "@NullArgument" ],
+    name: "My First HA Card",
+    version: "0.1.0"
+}
