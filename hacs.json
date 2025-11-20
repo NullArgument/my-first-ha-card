@@ -1,8 +1,7 @@
 {
   "name": "My First HA Card",
   "render_readme": true,
-  "content_in_root": false,
-  "country": ["US", "CA"],
-  "homeassistant": "2021.10.0b0",
+  "homeassistant": "2025.2.4",
+  "hacs": "2.0.5",
   "domains": ["light"]
 }
