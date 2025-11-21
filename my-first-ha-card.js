@@ -38,7 +38,7 @@ class MyFirstHACard extends HTMLElement
         }
 
         this.config = config;
-        tbis.requestUpdate();
+        this.requestUpdate();
     }
 
     getCardSize()
