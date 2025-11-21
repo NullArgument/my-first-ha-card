@@ -32,8 +32,7 @@ class MyFirstHACard extends HTMLElement
 
     getGridOptions()
     {
-        return
-        {
+        return {
             rows: 3,
             columns: 6,
             min_rows: 3,
