@@ -1,10 +1,12 @@
-class MyFirstHACard extends HTMLElement
-{
+class MyFirstHACard extends HTMLElement {
+    hass;
+    config;
+    content;
+
     set hass(hass) {
         this.hass = hass;
 
-        if (!this.content)
-        {
+        if (!this.content) {
             this.innerHTML = `
                 <ha-card header="My-First-Card">
                     <div class="card-content"></div>
@@ -25,24 +27,20 @@ class MyFirstHACard extends HTMLElement
         `;
     }
 
-    setConfig(config)
-    {
-        if (!config.entity)
-        {
+    setConfig(config) {
+        if (!config.entity) {
             throw new Error("You need to define an entity.");
         }
 
         this.config = config;
     }
 
-    getCardSize()
-    {
+    getCardSize() {
         //---- Not sure what 3 means... ----
         return 3;
     }
 
-    getGridOptions()
-    {
+    getGridOptions() {
         return {
             rows: 3,
             columns: 6,
