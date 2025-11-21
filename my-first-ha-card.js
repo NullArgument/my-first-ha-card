@@ -38,7 +38,6 @@ class MyFirstHACard extends HTMLElement
         }
 
         this.config = config;
-        this.requestUpdate();
     }
 
     getCardSize()
