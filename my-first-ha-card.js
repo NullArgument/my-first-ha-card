@@ -4,7 +4,7 @@ class MyFirstHACard extends HTMLElement {
     content;
 
     set hass(hass) {
-        this.hass = hass;
+        // this.hass = hass;
 
         if (!this.content) {
             this.innerHTML = `
