@@ -1,7 +1,13 @@
 class MyFirstHACard extends HTMLElement
 {
+    hass;
+    config;
+    content;
+
     set hass(hass)
     {
+        this.hass = hass;
+
         if (!this.content)
         {
             this.innerHTML = `
@@ -32,6 +38,7 @@ class MyFirstHACard extends HTMLElement
         }
 
         this.config = config;
+        tbis.requestUpdate();
     }
 
     getCardSize()
