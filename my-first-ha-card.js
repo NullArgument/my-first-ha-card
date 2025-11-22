@@ -1,7 +1,7 @@
 class MyFirstHACard extends HTMLElement {
-    _hass;
-    _config;
-    _content;
+    hass;
+    config;
+    content;
 
     // lifecycle
     constructor() {
@@ -14,9 +14,9 @@ class MyFirstHACard extends HTMLElement {
     }
 
     set hass(hass) {
-        this._hass = hass;
+        this.hass = hass;
 
-        if (!this._content) {
+        if (!this.content) {
             this.innerHTML = `
                 <ha-card header="My-First-Card">
                     <div class="card-content"></div>
@@ -26,11 +26,11 @@ class MyFirstHACard extends HTMLElement {
             this.content = this.querySelector("div");
         }
 
-        const entityId = this._content.entity;
+        const entityId = this.content.entity;
         const state = hass.states(entityId);
         const stateStr = state ? state.state : "unavailable";
 
-        this._content.innerHTML = `
+        this.content.innerHTML = `
             The state of ${entityId} is ${stateStr}!
             <br><br>
             [add additional content here]
