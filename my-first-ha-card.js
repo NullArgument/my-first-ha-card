@@ -1,12 +1,22 @@
 class MyFirstHACard extends HTMLElement {
-    // hass;
-    // config;
-    // content;
+    _hass;
+    _config;
+    _content;
+
+    // lifecycle
+    constructor() {
+        super();
+        // this.doCard();
+        // this.doStyle();
+        // this.doAttach();
+        // this.doQueryElements();
+        // this.doListen();
+    }
 
     set hass(hass) {
-        this.hass = hass;
+        this._hass = hass;
 
-        if (!this.content) {
+        if (!this._content) {
             this.innerHTML = `
                 <ha-card header="My-First-Card">
                     <div class="card-content"></div>
@@ -16,11 +26,11 @@ class MyFirstHACard extends HTMLElement {
             this.content = this.querySelector("div");
         }
 
-        const entityId = this.content.entity;
+        const entityId = this._content.entity;
         const state = hass.states(entityId);
         const stateStr = state ? state.state : "unavailable";
 
-        this.content.innerHTML = `
+        this._content.innerHTML = `
             The state of ${entityId} is ${stateStr}!
             <br><br>
             [add additional content here]
