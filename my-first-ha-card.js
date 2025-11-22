@@ -1,5 +1,4 @@
 class MyFirstHACard extends HTMLElement {
-    hass;
     config;
     content;
 
@@ -14,8 +13,18 @@ class MyFirstHACard extends HTMLElement {
         // this.doListen();
     }
 
+    setConfig(config) {
+        if (!config.entity) {
+            throw new Error("You need to define an entity.");
+        }
+
+        this.config = config;
+    }
+
     set hass(hass) {
-        this.hass = hass;
+        const entityId = this.config.entity;
+        const state = hass.states(entityId);
+        const stateStr = state ? state.state : "unavailable";
 
         if (!this.content) {
             this.innerHTML = `
@@ -27,23 +36,11 @@ class MyFirstHACard extends HTMLElement {
             this.content = this.querySelector("div");
         }
 
-        const entityId = this.content.entity;
-        const state = hass.states(entityId);
-        const stateStr = state ? state.state : "unavailable";
-
         this.content.innerHTML = `
             The state of ${entityId} is ${stateStr}!
             <br><br>
             [add additional content here]
         `;
-    }
-
-    setConfig(config) {
-        if (!config.entity) {
-            throw new Error("You need to define an entity.");
-        }
-
-        this.config = config;
     }
 
     getCardSize() {
