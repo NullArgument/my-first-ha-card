@@ -6,6 +6,7 @@ class MyFirstHACard extends HTMLElement {
     // lifecycle
     constructor() {
         super();
+        console.log("my-first-ha-card:constructor()");
         // this.doCard();
         // this.doStyle();
         // this.doAttach();
