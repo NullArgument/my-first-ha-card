@@ -24,7 +24,7 @@ class MyFirstHACard extends HTMLElement {
     set hass(hass) {
         const entityId = this.config.entity;
         const state = hass.states[entityId];
-        const stateStr = state ? state.state : "unavailable";
+        const stateStr = state ? state.state : 'unavailable';
 
         if (!this.content) {
             this.innerHTML = `
