@@ -22,7 +22,7 @@ class MyFirstHACard extends HTMLElement {
 
     set hass(hass) {
         this._hass = hass;
-        doUpdateHass();
+        this.doUpdateHass();
     }
 
     onClicked() {
