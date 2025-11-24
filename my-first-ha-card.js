@@ -8,10 +8,10 @@ class MyFirstHACard extends HTMLElement {
         super();
         console.log("my-first-ha-card:constructor()");
         this.doCard();
-        // this.doStyle();
-        // this.doAttach();
-        // this.doQueryElements();
-        // this.doListen();
+        this.doStyle();
+        this.doAttach();
+        this.doQueryElements();
+        this.doListen();
     }
 
     setConfig(config) {
