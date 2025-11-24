@@ -16,7 +16,7 @@ class MyFirstHACard extends HTMLElement {
 
     setConfig(config) {
         this._config = config;
-        this.doConfigCheck();
+        this.doCheckConfig();
         this.doUpdateConfig();
     }
 
